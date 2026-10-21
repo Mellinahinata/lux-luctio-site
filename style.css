@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #310b20;
+    color: #fff0f7;
+}
+
+.pagina-login {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 7%;
+    background:
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(150, 36, 91, 0.25),
+            transparent 35%
+        ),
+        #310b20;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    width: 210px;
+    max-width: 45%;
+    height: auto;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+.conteudo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.titulo-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.emu {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+}
+
+.titulo-login h1 {
+    font-size: 42px;
+    letter-spacing: 5px;
+    color: #ff8bc5;
+    text-shadow: 3px 3px 0 #7d2855;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #f7bfdc;
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form > label {
+    color: #ffd6e9;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form > input {
+    width: 100%;
+    padding: 15px 17px;
+    border: 2px solid #a84778;
+    border-radius: 12px;
+    background-color: #4a1735;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form > input::placeholder {
+    color: #d6a1be;
+}
+
+form > input:focus {
+    border-color: #ff8bc5;
+    box-shadow: 0 0 0 3px rgba(255, 139, 197, 0.15);
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 5px 0 12px;
+    font-size: 12px;
+}
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lembrar input {
+    accent-color: #f36eaf;
+}
+
+a {
+    color: #ff9bce;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff9bcf, #e84f9e);
+    color: #48122f;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+.cadastro {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #f7bfdc;
+}
+
+.decoracao,
+.fita,
+.personagem {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+}
+
+.explosao {
+    width: 110px;
+    left: 5%;
+    top: 34%;
+    opacity: 0.9;
+    transform: rotate(-12deg);
+}
+
+.linha {
+    width: 150px;
+    left: 8%;
+    bottom: 9%;
+    opacity: 0.8;
+}
+
+.fita {
+    width: 95px;
+    height: auto;
+    opacity: 0.85;
+}
+
+.fita-um {
+    top: 15%;
+    right: 10%;
+    transform: rotate(15deg);
+}
+
+.fita-dois {
+    bottom: 16%;
+    left: 23%;
+    transform: rotate(-20deg);
+}
+
+.personagem {
+    width: 240px;
+    max-height: 42vh;
+    object-fit: contain;
+    object-position: bottom right;
+    right: 3%;
+    bottom: 0;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 700px) {
+    .pagina-login {
+        padding: 25px 22px;
+    }
+
+    .logo {
+    display: block;
+    width: 210px;
+    max-width: 45%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    align-self: flex-start;
+    margin: 0;
+    padding: 0;
+    transform: none;
+}
+
+    .conteudo {
+        max-width: 360px;
+        margin: auto;
+        padding: 35px 0 100px;
+    }
+
+    .titulo-login h1 {
+        font-size: 34px;
+    }
+
+    .emu {
+        width: 65px;
+        height: 65px;
+    }
+
+    .personagem {
+        width: 125px;
+        max-height: 23vh;
+        right: 0;
+    }
+
+    .explosao {
+        width: 65px;
+        left: 2%;
+        top: 25%;
+    }
+
+    .linha {
+        width: 90px;
+        left: 3%;
+        bottom: 4%;
+    }
+
+    .fita {
+        width: 55px;
+    }
+
+    .fita-um {
+        top: 12%;
+        right: 5%;
+    }
+
+    .fita-dois {
+        left: 10%;
+        bottom: 12%;
+    }
+}
